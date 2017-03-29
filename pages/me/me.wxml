@@ -1,0 +1,22 @@
+
+<!--pages/me/me.wxml-->
+<view>
+  <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+    <view class="section">
+      <view class="section__title">input</view>
+      <input name="input" placeholder="please input here" />
+    </view>
+     <view class="section">
+      <view class="section__title">input11</view>
+      <input name="input11" placeholder="please input11 here" />
+    </view>
+    <view class="btn-area">
+      <button class="button" hover-class="button-hover" size="80%" type="primary" form-type="submit">绑定</button>
+      <button formType="reset">Reset</button>
+    </view>
+  </form>
+  <!--<form report-submit="true" bindsubmit="submit" bindreset="reset">
+    <input placeholder="姓名" />
+    <button class="button" hover-class="button-hover" size="80%" type="primary" form-type="submit">绑定</button>
+  </form>-->
+</view>

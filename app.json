@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/report/report",
+    "pages/me/me",
+     "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "收入流水",
+        "iconPath": "image/icon_normal.png",
+        "selectedIconPath": "image/icon_pressed.png"
+      },
+      {
+        "pagePath": "pages/report/report",
+        "text": "日报",
+        "iconPath": "image/icon_normal.png",
+        "selectedIconPath": "image/icon_pressed.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "image/icon_normal.png",
+        "selectedIconPath": "image/icon_pressed.png"
+      }
+    ]
+  }
+}

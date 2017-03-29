@@ -1,0 +1,21 @@
+/* page/index/index.wxss */
+.inputclass{
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+   
+}
+.inputs{
+    margin-top: 20rpx;
+    padding-left: 5rpx;
+    border-bottom: 1px solid #62b900;
+    width: 90%
+}
+.button{
+    margin-top: 30rpx;
+    width: 90%
+}
+.forget{
+    margin-top: 20rpx;
+    float: right;
+    margin-right: 40rpx
+}

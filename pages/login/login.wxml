@@ -1,0 +1,8 @@
+<view class="inputclass">
+  <input class="inputs" name="input1" placeholder="账号" type="number" focus="true" bindconfirm="accountconfirm" bindinput="accountinput" />
+  <input class="inputs" name="input1" placeholder="密码" bindconfirm="pwdconfirm" bindinput="pwdinput" password="true" />
+</view>
+<button class="button"  hover-class="button-hover" size="80%" type="primary" bindtap="loginbtn" loading="{{loading}}">
+  登    录
+</button>
+<text class="forget" >忘记密码</text>

@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<!--<scroll-view scroll-y="true" bindscrolltolower="scrollbottom" style="height:{{scrollHeight}}px" bindscrolltoupper="scrolltop" >-->
+<view class="container">
+<loading hidden="{{hidden}}" bindchange="loadingChange"> 
+  加载中... 
+ </loading> 
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
+ class="list" bindscrolltolower="scrollbottom" bindscroll="scroll" bindscrolltoupper="scrolltop">
+  <!--<view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto" gravity="center">
+    <text class="user-motto">{{motto}}</text>
+  </view>-->
+  <loading hidden="{{hidden}}" bindchange="loadingChange"> 
+  加载中... 
+ </loading> 
+  <block wx:for="{{info}}" wx:for-index="index" wx:for-item="item">
+  <view class="listitem" >
+    <!--<text>当前的泊位编号是{{item.ber_name}}</text>-->
+    <text>当前的泊位编号是{{index}}</text>
+    <text>当前的泊位编号是{{item.carnumber}}</text>
+    <text>当前的泊位编号是{{index}}</text>
+    <text>当前的泊位编号是{{item.carnumber}}</text>
+    <text>当前的泊位编号是{{index}}</text>
+    <text>当前的泊位编号是{{item.carnumber}}</text>
+    <text>当前的泊位编号是{{index}}</text>
+    <text>当前的泊位编号是{{item.carnumber}}</text>
+    <text>当前的泊位编号是{{index}}</text>
+    <text>当前的泊位编号是{{item.carnumber}}</text>
+    <text>当前的泊位编号是{{index}}</text>
+    <text>当前的泊位编号是{{item.carnumber}}</text><text>当前的泊位编号是{{index}}</text>
+    <text>当前的泊位编号是{{item.carnumber}}</text>
+    <view class="borderline"/>
+  </view>
+  </block>
+
+</scroll-view>
+
+</view>
