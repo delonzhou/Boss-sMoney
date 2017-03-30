@@ -1,4 +1,5 @@
 var app = getApp()
+var utils = require('../../utils/util.js');
 Page({
   data: {
     // String1
@@ -9,15 +10,15 @@ Page({
   },
   formSubmit: function (e) {
     var that = this;
-    console.log('form发生了submit事件，携带数据为：', e.detail);
+    // console.log('form发生了submit事件，携带数据为：', e.detail);
     that.setData({
       formId: e.detail.formId,
       input0: e.detail.value.input,
       input1: e.detail.value.input11
     })
-    console.log('赋值后：', that.data.formId);
-    console.log('赋值后：', that.data.input0);
-    console.log('赋值后：', that.data.input1);
+    console.log('赋值后formId：', that.data.formId);
+    // console.log('赋值后：', that.data.input0);
+    // console.log('赋值后：', that.data.input1);
     wx.request({
       url: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + app.globalData.appid + '&secret=' + app.globalData.secret,
       data: {},
@@ -37,6 +38,25 @@ Page({
              touser:app.globalData.openid,
              template_id:app.globalData.template_id,
              form_id:that.data.formId,
+             data:{
+               keyword1:{
+                  value:'小小',
+                  color:'#173177'
+               },
+               keyword2:{
+                  // value:utils.formatTime(Date.now()),
+                   value:utils.formatTime(new Date),
+                  color:'#62b900'
+               },
+               keyword3:{
+                  value:'122222222',
+                  color:'#000000'
+               },
+               keyword4:{
+                  value:'ADC',
+                  color:'#ff0000'
+               }
+             }
            },
            method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
            // header: {}, // 设置请求的 header

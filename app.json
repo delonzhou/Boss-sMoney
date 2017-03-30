@@ -21,7 +21,7 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "收入流水",
+        "text": "交易流水",
         "iconPath": "image/icon_normal.png",
         "selectedIconPath": "image/icon_pressed.png"
       },

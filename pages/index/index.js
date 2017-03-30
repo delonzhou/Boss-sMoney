@@ -6,13 +6,16 @@ Page({
     scrollHeight: 0,
     scrollTop: 0,
     hidden: true,
+    hiddenin: true,
     page: 1,
     size: 5,
     motto: 'Hello World1',
     userInfo: {},
     berths: [],
     info: [],
-    result: null
+    result: null,
+    orderNum:405,
+    orderTotal:533
   },
   //事件处理函数
   bindViewTap: function () {
@@ -33,11 +36,12 @@ Page({
   //滑动到顶部刷新
   scrolltop: function (e) {
     var that = this;
-    // that.setData({
-    //   page: 1,
-    //   info:[]
-    // })
-    // loadData(this.data.size, this.data.page, this);
+    that.setData({
+      page: 1,
+      info: [],
+      hidden: false
+    })
+    loadData(this.data.size, this.data.page, this);
     console.log("滑到到顶部了" + that.data.page);
   },
   //滑动到底部触发加载更多
@@ -49,7 +53,8 @@ Page({
     })
     var that = this;
     that.setData({
-      page: that.data.page + 1
+      page: that.data.page + 1,
+      hiddenin: false
     })
 
     loadData(this.data.size, this.data.page, this);
@@ -60,7 +65,7 @@ Page({
     console.log('onLoad')
     wx.setNavigationBarTitle({
       title: '收银台',
-      success: function(res) {
+      success: function (res) {
         // success
       }
     })
@@ -101,6 +106,10 @@ function loadData(size, page, that) {
         success: function (res) {
           // success
           console.log(res.data);
+          that.setData({
+            hidden: true,
+            hiddenin: true
+          })
           var result = res.data;
           var types = typeof result;
           if ((types === 'string' && result.indexOf("token is invalid") != -1) || (types === 'object' && result.info.indexOf("token is invalid") != -1)) {

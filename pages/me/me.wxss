@@ -1,1 +1,50 @@
 /* pages/me/me.wxss */
+.head{
+    height: 200rpx;
+    
+    vertical-align: middle
+}
+.head_yue{
+   
+    vertical-align: middle;
+    background: #00ff00;
+    align-items: center
+}
+.text_yue{
+    display: inline-block;
+
+}
+.value_yue{
+    display: inline-block;
+    
+   font-size: 20;
+   height: 50rpx
+}
+.text_tixian{
+    display: inline-block;
+   
+    text-align: right
+}
+.arrow_right{
+ width: 30rpx;
+    height: 30rpx;
+}
+.container .search-left{
+  flex: 8;
+  background: #4EA3E7;
+  text-align: left;
+}
+.container .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
