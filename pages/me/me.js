@@ -6,7 +6,84 @@ Page({
     formId: "",
     input0: "",
     input1: "",
-    access_token: ""
+    access_token: "",
+
+    yue:0
+  },
+  clicktixian:function(e){
+      console.log("点击了提现")
+      wx.navigateTo({
+        url: '../cash/cash',
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+  },
+  clickdetail:function(e){
+      console.log("点击了提现明细")
+      wx.navigateTo({
+        url: '../cashdetail/cashdetail',
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+  },
+  clickbank:function(e){
+      console.log("点击了银行账户")
+      wx.navigateTo({
+        url: '../bankaccount/bankaccont',
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+  },
+  clickus:function(e){
+      console.log("点击了关于我们")
+      wx.navigateTo({
+        url: '../aboutus/aboutus',
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+  },
+  clicklogout:function(e){
+      console.log("点击了退出登录")
+      wx.redirectTo({
+        url: '../login/login',
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
   },
   formSubmit: function (e) {
     var that = this;
@@ -121,9 +198,9 @@ Page({
   onShareAppMessage: function () {
     // 用户点击右上角分享
     return {
-      title: 'title', // 分享标题
-      desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
+      title: '我的', // 分享标题
+      desc: '我的信息', // 分享描述
+      path: '/me/me' // 分享路径
     }
   }
 })

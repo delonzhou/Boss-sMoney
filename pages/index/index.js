@@ -99,7 +99,7 @@ function loadData(size, page, that) {
       token = res.data;
       wx.request({
         // url: 'https://s.bolink.club/zld/collectorrequest.do?action=getberths&out=josn&token=' + token + '&berthid=1561&devicecode=869323004253387',
-        url: 'https://s.bolink.club/zld/collectorrequest.do?action=orderhistory&token=' + token + '&page=' + page + '&size=' + size + '&uid=454361&day=last&ptype=&version=2&out=json',
+        url: 'https://s.bolink.club/zld/collectorrequest.do?action=orderhistory&token=' + token + '&page=' + page + '&size=' + size + '&uid=454361&day=today&ptype=&version=2&out=json',
         data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         // header: {}, // 设置请求的 header

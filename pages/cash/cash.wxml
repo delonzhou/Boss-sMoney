@@ -1,0 +1,22 @@
+<view class="padd">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <view class="radio" wx:for="{{items}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}">
+        <span>{{item.value}}</span>  </radio>
+    </view>
+  </radio-group>
+</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <view class="middle__title">选择提现卡</view>
+  <view class="middle">
+    <span>{{array[index]}}</span> 
+    <label>></label>
+  </view>
+</picker>
+<view class="inputview padd">
+  <input class="input" bindconfirm="pwdconfirm" bindinput="pwdinput" placeholder="{{account}}" type="digit" />
+  <text>  元</text>
+</view>
+  <button class="button"  hover-class="button-hover" size="80%" type="primary" bindtap="clicklogout" loading="{{loading}}">
+{{buttontext}}
+</button>

@@ -1,0 +1,6 @@
+<!--pages/aboutus/aboutus.wxml-->
+<view class="container">
+    <image class="image" src="/image/bolink.png"></image>
+    <text>深圳泊链科技有限公司</text>
+    <text>联系方式：010-110</text>
+</view>

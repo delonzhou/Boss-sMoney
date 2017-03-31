@@ -1,50 +1,54 @@
 /* pages/me/me.wxss */
+.padd{
+    padding:0 40rpx;
+}
 .head{
-    height: 200rpx;
-    
-    vertical-align: middle
+    height: 200rpx; 
+    vertical-align: middle;
+    margin:  100rpx 0 100rpx 0
 }
 .head_yue{
-   
-    vertical-align: middle;
-    background: #00ff00;
-    align-items: center
+    overflow:hidden;
+}
+.button{
+    margin-top: 30rpx;
+    width: 90%
 }
 .text_yue{
-    display: inline-block;
-
+    float:left;
+    line-height: 80rpx;
 }
 .value_yue{
-    display: inline-block;
-    
-   font-size: 20;
-   height: 50rpx
+ float:left;   
+font-size: 60rpx;
+margin-left:10rpx;
 }
 .text_tixian{
-    display: inline-block;
-   
-    text-align: right
+   float:right;
+   line-height: 80rpx;
 }
 .arrow_right{
  width: 30rpx;
     height: 30rpx;
 }
-.container .search-left{
-  flex: 8;
-  background: #4EA3E7;
-  text-align: left;
+
+.midddle{
+    margin-top:100rpx;
 }
-.container .search-left input{
-  display: inline-block;
-  height: 65rpx;
-  font-size: 26rpx;
+.middle view{
+    overflow:hidden;
+    line-height: 80rpx;
 }
-.container .search .search-left image{
-  display: inline-block;
-  width: 35rpx;
-  height: 35rpx;
-  padding: 15rpx 15rpx 15rpx 20rpx;
+.middle view span{
+    float:left;
 }
-.container .search .search-right{
-  flex: 1;
+.middle view label{
+    float:right;
+}
+.me_list{
+ 
+    border-bottom: 1px solid #62b900
+}
+.button{
+    margin-top: 200rpx
 }
