@@ -1,0 +1,29 @@
+/* pages/bankaccount/bankaccount.wxss *//* pages/bankaccount/bankaccont.wxss */
+.padd{
+    padding: 0 40rpx
+}
+.button{
+    margin-top: 50rpx;
+    margin-bottom: 30rpx
+}
+.cardName{
+    
+}
+.cardNum{
+    margin-top: 10rpx;
+  font-size: 30rpx
+}
+.view-flex{
+    margin-top: 20rpx;
+    padding-bottom: 20rpx;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #62b900
+}
+.flex-left{
+    width: 100%
+}
+.flex-right{
+    display: flex;
+    align-items:center
+}

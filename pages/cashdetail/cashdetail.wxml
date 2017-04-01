@@ -1,2 +1,21 @@
+
 <!--pages/cashdetail/cashdetail.wxml-->
-<text>pages/cashdetail/cashdetail.wxml</text>
+<view class="padd">
+  <block wx:for="{{cashDetail}}" wx:for-item="detail">
+
+    <!--<view class="flex-item">-->
+    <view class="line1">
+      <text class="texttype">{{detail.typeName}}</text>
+      <text class="textyuan">元</text>
+      <text class="textmoney" wx:if="{{detail.types==1}}" style="color:#62b900">{{detail.cash}}</text>
+      <text class="textmoney" wx:elif="{{detail.types==2}}" style="color:red">{{detail.cash}}</text>
+      <text class="textmoney" wx:else>{{detail.cash}}</text>
+    </view>
+    <view class="line2">
+      <text class="textyue">余额：{{detail.yue}}元</text>
+      <text class="texttime">{{detail.date}}</text>
+    </view>
+
+    <!--</view>-->
+  </block>
+</view>

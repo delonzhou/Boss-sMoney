@@ -43,7 +43,7 @@ Page({
   clickbank:function(e){
       console.log("点击了银行账户")
       wx.navigateTo({
-        url: '../bankaccount/bankaccont',
+        url: '../bankaccount/bankaccount',
         success: function(res){
           // success
         },

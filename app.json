@@ -1,15 +1,14 @@
 {
   "pages": [
-    "pages/bankaccount/bankaccont",
-    "pages/bankaccountadd/bankaccontadd",
     "pages/index/index",
     "pages/login/login",
     "pages/report/report",
     "pages/me/me",
+    "pages/bankaccount/bankaccount",
+    "pages/bankaccountadd/bankaccountadd",
     "pages/cash/cash",
     "pages/cashdetail/cashdetail",
-   
-     "pages/aboutus/aboutus",
+    "pages/aboutus/aboutus",
     "pages/logs/logs"
   ],
   "window": {

@@ -1,0 +1,33 @@
+/* pages/bankaccountadd/bankaccountadd.wxss */
+
+.padd {
+  padding: 40rpx 40rpx;
+}
+.flex-form{
+    display: block;
+    direction: column;
+}
+.flex-item {
+  height: 100rpx;
+  float: left;
+  direction: row;
+  align-items: center;
+}
+
+.flex-item text {
+  float: left;
+  position: absolute;
+}
+
+.flex-item input {
+  margin-left: 130rpx;
+  padding-left: 10rpx;
+  width: 95%;
+  float: left;
+  border-bottom: 1px solid #62b900;
+}
+.button{
+    margin-top: 50rpx;
+    display: left;
+    width: 100%;
+}

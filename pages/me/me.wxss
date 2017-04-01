@@ -46,7 +46,7 @@ margin-left:10rpx;
     float:right;
 }
 .me_list{
- 
+ height: 80rpx;
     border-bottom: 1px solid #62b900
 }
 .button{

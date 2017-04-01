@@ -1,1 +1,49 @@
 /* pages/cashdetail/cashdetail.wxss */
+
+.padd {
+  padding: 20rpx 40rpx;
+}
+
+.flex-item {
+  display: flex;
+  direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.line1 {
+    margin-top: 30rpx;
+  height: 60rpx;
+}
+.line2{
+    height: 60rpx;
+    border-bottom: 1px solid #62b900;
+}
+.texttype {
+  float: left;
+  margin-left: 50rpx;
+}
+
+.textmoney {
+  float: right;
+  color: #62b900;
+}
+
+.textyuan {
+  float: right;
+  margin-right: 120rpx;
+}
+
+.textyue {
+  font-size: 30rpx;
+  color: #7f7c7c;
+  float: left;
+  margin-left: 40rpx;
+}
+
+.texttime {
+  font-size: 30rpx;
+  color: #7f7c7c;
+  float: right;
+  margin-right: 40rpx;
+}

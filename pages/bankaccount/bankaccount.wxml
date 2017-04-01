@@ -1,0 +1,17 @@
+
+<!--pages/bankaccount/bankaccont.wxml-->
+<view class="padd">
+  <button class="button padd" hover-class="button-hover" size="80%" type="primary" bindtap="clickadd" loading="{{loading}}">
+    添加新银行卡
+  </button>
+  <block wx:for="{{accoutList}}" wx:for-item="account">
+    <view class="view-flex" bindtap="clicklist" id="{{account.id}}">
+      <view class="flex-left">
+        <view class="cardName">{{account.cardName}}</view>
+        <view class="cardNum">{{account.userName}}</view>
+        <view class="cardNum">{{account.cardNum}}</view>
+      </view>
+      <view class="flex-right">></view>
+    </view>
+  </block>
+</view>

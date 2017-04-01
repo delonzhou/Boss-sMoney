@@ -1,0 +1,24 @@
+
+<!--pages/bankaccountadd/bankaccountadd.wxml-->
+<view class='padd'>
+  <form bindsubmit="submitform" report-submit="true">
+    <view class="flex-item">
+      <text>姓　名：</text>
+      <input name='userName' placeholder="输入开卡人姓名" placeholder-style="font-size:13px" value="{{userName}}"/>
+    </view>
+    <view class="flex-item">
+      <text>开户行：</text>
+      <input name='cardName' placeholder="如:招商银行、中国建设银行" placeholder-style="font-size:13px" value="{{cardName}}"/>
+    </view>
+    <view class="flex-item">
+      <text>卡　号：</text>
+      <input name='cardNum' placeholder="银行卡正面卡号" placeholder-style="font-size:13px" value="{{cardNum}}" type="number"/>
+    </view>
+    <button class="add button flex-item" hover-class="button-hover" style="{{addVisible}}" type="primary" bindtap="clickadd" loading="{{loading}}" form-type="submit">
+      添　加
+    </button>
+    <button class="edit button flex-item" hover-class="button-hover" style="{{editVisible}}" type="primary" bindtap="clickedit" loading="{{loading}}" form-type="submit">
+      修　改
+    </button>
+  </form>
+</view>

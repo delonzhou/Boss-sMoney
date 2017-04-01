@@ -1,36 +1,52 @@
 Page({
-  data:{
-    String1
+  data: {
+    // String1
+    cashDetail: [
+      {
+        typeName: '自动提现',
+        types: 2,
+        yue: 0,
+        date: '2017-4-1 12:45:22',
+        cash:2500
+      },
+       {
+        typeName: '每日结算',
+        types: 1,
+        yue: 2500,
+        date: '2017-4-1 00:00:22',
+        cash:500
+      }
+    ]
   },
-  onLoad:function(options){
+  onLoad: function (options) {
     // 生命周期函数--监听页面加载
-    String2
+    // String2
   },
-  onReady:function(){
+  onReady: function () {
     // 生命周期函数--监听页面初次渲染完成
-    String3
+    // String3
   },
-  onShow:function(){
+  onShow: function () {
     // 生命周期函数--监听页面显示
-    String4
+    // String4
   },
-  onHide:function(){
+  onHide: function () {
     // 生命周期函数--监听页面隐藏
-    String5
+    // String5
   },
-  onUnload:function(){
+  onUnload: function () {
     // 生命周期函数--监听页面卸载
-    String6
+    // String6
   },
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
     // 页面相关事件处理函数--监听用户下拉动作
-    String7
+    // String7
   },
-  onReachBottom: function() {
+  onReachBottom: function () {
     // 页面上拉触底事件的处理函数
-    String8
+    // String8
   },
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
     // 用户点击右上角分享
     return {
       title: 'title', // 分享标题
