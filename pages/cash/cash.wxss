@@ -1,50 +1,63 @@
 /* pages/cash/cash.wxss */
-.padd{
-    padding:0 40rpx;
-}
-.radio{
-    display: block;
-    line-height: 40rpx;
-    margin-top: 60rpx;
-}
-.radio span{
-    display: inline-block;
-    padding-top:10rpx;
+
+.padd {
+  padding: 0 40rpx;
 }
 
-.middle{
-    padding:10rpx 40rpx;
-    margin: 30rpx 0 20rpx;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    overflow:hidden;
+.radio {
+  display: block;
+  line-height: 40rpx;
+  margin-top: 60rpx;
 }
-.middle__title{
- margin: 60rpx 30rpx 20rpx;
-}
-.middle span{
-    float:left;
-}
-.middle label{
-    float: right;
-}
-.inputview{
-    margin-top: 50rpx;
-    display: flex;
-    height: 80rpx;
-    align-items: center
-}
-.inputview input{
-    float:left;
-    height: 70rpx;
-    width:200rpx;
-    margin-left: 50rpx;
-    border: 1px solid #62b900
-}
-.inputview text{
-    float: left
-}
-.button{
-    margin:150rpx 40rpx
 
+.radio span {
+  display: inline-block;
+  padding-top: 10rpx;
+}
+
+.middle {
+  width: 85%;
+  margin-left: 30rpx;
+  padding-left: 20rpx;
+  padding-top: 30rpx;
+  border-top: 1px solid #eeedf3;
+  border-bottom: 1px solid #eeedf3;
+  height: 80rpx;
+}
+
+.middle__title {
+  margin: 60rpx 30rpx 20rpx;
+}
+
+.middle span {
+  float: left;
+}
+
+.middle label {
+  float: right;
+}
+
+.inputview {
+  margin-top: 50rpx;
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+}
+
+.inputview input {
+  float: left;
+  height: 70rpx;
+  width: 200rpx;
+  margin-left: 50rpx;
+  padding-left: 20rpx;
+  border: 1px solid #62b900;
+}
+
+.inputview text {
+  float: left;
+  margin-left: 10rpx;
+}
+
+.button {
+  margin: 150rpx 40rpx;
 }

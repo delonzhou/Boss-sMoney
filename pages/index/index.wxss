@@ -27,6 +27,7 @@
   width:100%;
   display:flex;
   background-color: #FFFFFF;
+  border-bottom: 1px solid #62b900
 }
 .flex-item{
   width: 100%;
@@ -38,8 +39,32 @@
 }
 .listitem{
   width:95%;
-  margin: 0 auto
+  margin: 0 auto;
+ background: red;
 }
-.borderline{
+.borderline label{
+  width: 100%;
+  float: left;
+  height: 1px;
   border-bottom: 1px solid #62b900
+}
+.item_carnumber{
+  width: 100%;
+  float: left;
+  margin-top: 20rpx;
+}
+.item_orderid{
+  float:left;
+  font-size: 30rpx;
+  color: #7f7c7c;
+margin-top: 10rpx;
+
+}
+.item_total{
+  float:right;
+  font-size: 30rpx;
+  color: #7f7c7c;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  margin-right: 40rpx;
 }

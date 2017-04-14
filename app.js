@@ -23,8 +23,6 @@ App({
             // header: {}, // 设置请求的 header
             success: function (res) {
               // success
-               
-               
                  that.globalData.openid=res.data.openid,
                  that.globalData.session_key=res.data.session_key
                  console.log("登录接口转换登录凭证：" + that.globalData.openid+'  '+that.globalData.session_key)
@@ -56,9 +54,11 @@ App({
     userInfo: null,
     appid: 'wx8e7f7621a22ce888',
     secret: 'd9f2f0c58acb70f1e1ace43799f07c5b',
-    template_id:'8IrDcZwC4QWxUwywOm_gMrQo1GeTpzY6aUXjv0SKpfU',
+    template_id:'8IrDcZwC4QWxUwywOm_gMqb2YwqpiobNYPo_gqA3Y-s',
     openid:'',
-    session_key:''
-
+    session_key:'',
+    user:{},
+    url:'https://s.bolink.club/web'
+    // url:'http://yxiudongyeahnet.vicp.cc:50803/cms-web'
   } 
 })

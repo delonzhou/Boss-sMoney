@@ -1,6 +1,15 @@
+
 <!--pages/aboutus/aboutus.wxml-->
-<view class="container">
-    <image class="image" src="/image/bolink.png"></image>
+<!--<view class="container">
+  <view class="views">
+    <image class="image" src="https://s.bolink.club/img/f2.png"></image>
     <text>深圳泊链科技有限公司</text>
-    <text>联系方式：010-110</text>
-</view>
+    <text>京ICP备14031523</text>
+  </view>
+</view>-->
+
+  <view class="views">
+    <image class="image" src="https://s.bolink.club/img/f2.png"></image>
+    <text>深圳泊链科技有限公司</text>
+    <text>京ICP备14031523</text>
+  </view>

@@ -3,7 +3,9 @@
 .padd {
   padding: 20rpx 40rpx;
 }
-
+.scroll{
+  background-color: white
+}
 .flex-item {
   display: flex;
   direction: column;

@@ -1,2 +1,28 @@
-<!--pages/report/report.wxml-->
-<text>pages/report/report.wxml</text>
+
+<!--pages/cashdetail/cashdetail.wxml-->
+<view class="padd">
+  
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="scrollbottom" bindscroll="scroll" bindscrolltoupper="scrolltop" lower-threshold="50">
+      <loading hidden="{{hiddenin}}" bindchange="loadingChange">
+        加载中...
+      </loading>
+     <block wx:for="{{info}}" wx:for-item="detail">
+    <view class="line1">
+      <!--<text class="texttype">{{detail.remark}}</text>-->
+       <text class="texttype">自动提现</text>
+      <text class="textyuan">元</text>
+      <text class="textmoney" wx:if="{{detail.types==1}}" style="color:#62b900">{{detail.money}}</text>
+      <text class="textmoney" wx:elif="{{detail.types==2}}" style="color:red">{{detail.money}}</text>
+      <text class="textmoney" wx:else>{{detail.money}}</text>
+    </view>
+    <view class="line2">
+      <text class="textyue">余额：{{detail.total}}元</text>
+      <text class="texttime">{{detail.ctime}}</text>
+    </view>
+  </block>
+    </scroll-view>
+  
+</view>

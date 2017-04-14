@@ -1,6 +1,35 @@
 // pages/bankaccountadd/bankaccontadd.js
 var app = getApp();
 var utils = require('../../utils/util.js');
+function alert(message) {
+  wx.showModal({
+    title: '提示',
+    content: message,
+    confirmColor: '#118EDE',
+    showCancel: false,
+    success: function (res) {
+      if (res.confirm) {
+        //console.log('用户点击确定')    
+      }
+    }
+  });
+}
+function valueVertify(name, bankname, cardnum) {
+  //  var password=value.password;  
+  if (name === "" || name === null) {
+    alert("姓名不能为空");
+    return false;
+  }
+  if (bankname === "" || bankname === null) {
+    alert("开户行不能为空");
+    return false;
+  }
+  if (cardnum === "" || cardnum === null) {
+    alert("卡号不能为空");
+    return false;
+  }
+  return true;
+}
 Page({
   data: {
     cardName: '',
@@ -17,14 +46,72 @@ Page({
     console.log('点击了edit ' + e.detail.value)
   },
   submitform: function (e) {
+    if (!valueVertify(e.detail.value.userName, e.detail.value.cardName, e.detail.value.cardNum)) {
+      return;
+    }
     let that = this;
     that.setData({
       cardName: e.detail.value.cardName,
       cardNum: e.detail.value.cardNum,
       userName: e.detail.value.userName
     })
-    console.log('表单提交了 ' + e.detail.value)
-    sendModelMSG(e.detail.formId,that.data.userName,that.data.cardName,that.data.cardNum)
+    let token;
+
+    wx.getStorage({
+      key: 'token',
+      success: function (res) {
+        // success
+        token = res.data;
+
+        wx.request({
+          url: app.globalData.url + '/account/addcard',
+          data: {
+            name: e.detail.value.userName,
+            card_number: e.detail.value.cardNum,
+            bank_name: e.detail.value.cardName,
+            token: token,
+            // park_id: parkid,
+            // role_id: 4
+          },
+          method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          }, // 设置请求的 header
+          success: function (res) {
+            // success
+            let result = res.data;
+            if (result == 1) {
+              console.log('添加成功');
+              alert('添加成功！');
+              sendModelMSG(e.detail.formId, that.data.userName, that.data.cardName, that.data.cardNum)
+              that.setData({
+                cardName: '',
+                cardNum: '',
+                userName: '',
+              })
+            }
+          },
+          fail: function (res) {
+            // fail
+            utils.reLogin();
+          },
+          complete: function (res) {
+            // complete
+          }
+        })
+        console.log('表单提交了 ' + e.detail.value)
+        
+      },
+      fail: function (res) {
+        // fail
+        utils.reLogin();
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
+
+
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -89,11 +176,11 @@ function sendModelMSG(formId, name, cardName, cardNum) {
               color: '#173177'
             },
             keyword3: {
-              value: cardNum,
+              value: cardName,
               color: '#173177'
             },
             keyword4: {
-              value: cardName,
+              value: cardNum,
               color: '#173177'
             }
           }

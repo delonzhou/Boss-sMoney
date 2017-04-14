@@ -7,9 +7,9 @@
   <block wx:for="{{accoutList}}" wx:for-item="account">
     <view class="view-flex" bindtap="clicklist" id="{{account.id}}">
       <view class="flex-left">
-        <view class="cardName">{{account.cardName}}</view>
-        <view class="cardNum">{{account.userName}}</view>
-        <view class="cardNum">{{account.cardNum}}</view>
+        <view class="cardName">{{account.bank_name}}</view>
+        <view class="cardNum">{{account.name}}</view>
+        <view class="cardNum">{{account.card_number}}</view>
       </view>
       <view class="flex-right">></view>
     </view>

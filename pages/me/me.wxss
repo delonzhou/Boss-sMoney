@@ -1,54 +1,111 @@
 /* pages/me/me.wxss */
-.padd{
-    padding:0 40rpx;
-}
-.head{
-    height: 200rpx; 
-    vertical-align: middle;
-    margin:  100rpx 0 100rpx 0
-}
-.head_yue{
-    overflow:hidden;
-}
-.button{
-    margin-top: 30rpx;
-    width: 90%
-}
-.text_yue{
-    float:left;
-    line-height: 80rpx;
-}
-.value_yue{
- float:left;   
-font-size: 60rpx;
-margin-left:10rpx;
-}
-.text_tixian{
-   float:right;
-   line-height: 80rpx;
-}
-.arrow_right{
- width: 30rpx;
-    height: 30rpx;
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #eeedf3;
 }
 
-.midddle{
-    margin-top:100rpx;
+.padd {
+  padding: 0 40rpx;
+  background-color: white;
 }
-.middle view{
-    overflow:hidden;
-    line-height: 80rpx;
+
+.userinfo {
+  display: block;
 }
-.middle view span{
-    float:left;
+
+.info-item {
+  display: block;
 }
-.middle view label{
-    float:right;
+
+.userinfo-img {
+  width: 130rpx;
+  height: 130rpx;
+  padding: 35prx 0;
 }
-.me_list{
- height: 80rpx;
-    border-bottom: 1px solid #62b900
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  float: left;
+  margin-top: 35rpx;
+  margin-right: 20rpx;
 }
-.button{
-    margin-top: 200rpx
+
+.userinfo-name {
+  padding-top: 20rpx;
+  display: block;
+}
+
+.head {
+  height: 200rpx;
+  vertical-align: middle;
+  margin: 100rpx 0 100rpx 0;
+}
+
+.button {
+  margin-top: 30rpx;
+  width: 90%;
+}
+
+.text_yue {
+  margin-top: 10rpx;
+  float: left;
+  line-height: 80rpx;
+}
+
+.value_yue {
+  float: left;
+  margin-top: 10rpx;
+  font-size: 60rpx;
+  margin-left: 10rpx;
+}
+
+.text_tixian {
+  margin-top: 10rpx;
+  float: right;
+  line-height: 80rpx;
+}
+
+.arrow_right {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.midddle {
+  margin-top: 100rpx;
+  background-color: white;
+}
+
+.middle view {
+  overflow: hidden;
+  line-height: 80rpx;
+}
+
+.middle view image {
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.middle view span {
+  float: left;
+  margin-left: 10rpx;
+}
+
+.middle view label {
+  float: right;
+}
+
+.me_list {
+  padding-top: 20rpx;
+  height: 100rpx;
+  border-bottom: 1px solid #eeedf3;
+}
+
+.button {
+  margin-top: 200rpx;
 }

@@ -46,79 +46,101 @@ Page({
     loading: false,
     account: "",
     pwd: "",
-    md5pwd: ""
+    md5pwd: "",
+    user: {}
   },
   loginbtn: function (e) {
-    console.log("account  " + this.data.account + "   pwd " + this.data.pwd);
-    this.setData({
-      loading: !this.data.loading
+    var that = this;
+    that.setData({
+      loading: !that.data.loading
     })
-    var result = pwdVertify(this.data.account, this.data.pwd);
-    this.setData({
+    var result = pwdVertify(that.data.account, that.data.pwd);
+    that.setData({
       loading: false,
     })
     if (result != "") {
-      this.setData({
+      that.setData({
         loading: false,
         md5pwd: result
       })
       wx.request({
-        url: 'https://s.bolink.club/zld/collectorlogin.do?username=' + this.data.account + '&password=' + this.data.md5pwd + '&version=1410&devicecode=null&out=json',
+        // url: 'https://s.bolink.club/zld/collectorlogin.do?username=' + this.data.account + '&password=' + this.data.md5pwd + '&version=1410&devicecode=null&out=json',
+        url: app.globalData.url + '/user/dologin',
+        data: {
+          username: that.data.account,
+          password: that.data.pwd
+          //  username: '10001',
+          // password: '123'
 
-        data: {},
-        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        // header: {}, // 设置请求的 header
+        },
+        method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        }, // 设置请求的 header
         success: function (res) {
           // success
-          var result = res.data.info;
-          var token = res.data.token;
-          console.log("登录结果" + res.data.info);
-          if (result === "success") {
-            // alert("登录成功");
-            wx.setStorage({
-              key: 'token',
-              data: token,
-              success: function (res) {
-                // success
-                console.log("token储存成功")
-                wx.switchTab({
-                  url: '../index/index',
-                  success: function (res) {
-                    // success
-                  },
-                  fail: function () {
-                    // fail
-                  },
-                  complete: function () {
-                    // complete
-                  }
-                })
-              },
-              fail: function () {
-                // fail
-              },
-              complete: function () {
-                // complete
-              }
-            })
+          let state = res.data.state;
+          if (state) {
+            //登录成功
+            if (res.data.user.roleid == 4) {
+              //角色是4才能登录
+              let token = res.data.token;
+              // let parkid = res.data.user.parkid;
+              let user = res.data.user;
+              app.globalData.user = res.data.user;
+              that.setData({
+                loading: false,
+                user: res.data.user
+              })
+              wx.setStorage({
+                key: 'token',
+                data: token,
+                success: function (res) {
+                  // success
+                  console.log("token储存成功")
+                  wx.setStorage({
+                    key: 'user',
+                    data: user,
+                    success: function (res) {
+                      // success
+                      wx.switchTab({
+                        url: '../index/index',
+                        success: function (res) {
+                          // success
+                        },
+                        fail: function () {
+                          // fail
+                        },
+                        complete: function () {
+                          // complete
+                        }
+                      })
+                    },
+                    fail: function (res) {
+                      // fail
+                    },
+                    complete: function (res) {
+                      // complete
+                    }
+                  })
+                },
+                fail: function () {
+                  // fail
+                },
+                complete: function () {
+                  // complete
+                }
+              })
+            } else {
+              alert('角色没有权限！');
+            }
 
-            // wx.navigateTo({
-            //   url: '../index/index',
-            //   success: function(res){
-            //     // success
-            //   },
-            //   fail: function() {
-            //     // fail
-            //   },
-            //   complete: function() {
-            //     // complete
-            //   }
-            // })
           } else {
-            alert(result);
+            //登录失败
+            alert(res.data.msg);
           }
         },
-        fail: function () {
+        fail: function (e) {
           // fail
           console.log("登录失败")
           wx.navigateTo({

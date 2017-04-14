@@ -1,13 +1,14 @@
 {
   "pages": [
+   
     "pages/index/index",
     "pages/login/login",
     "pages/report/report",
     "pages/me/me",
+     "pages/cash/cash",
+    "pages/cashdetail/cashdetail",
     "pages/bankaccount/bankaccount",
     "pages/bankaccountadd/bankaccountadd",
-    "pages/cash/cash",
-    "pages/cashdetail/cashdetail",
     "pages/aboutus/aboutus",
     "pages/logs/logs"
   ],
@@ -15,8 +16,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#dddddd",
@@ -33,14 +33,14 @@
       {
         "pagePath": "pages/report/report",
         "text": "日报",
-        "iconPath": "image/icon_normal.png",
-        "selectedIconPath": "image/icon_pressed.png"
+        "iconPath": "image/icon_daily_normal.png",
+        "selectedIconPath": "image/icon_daily_press.png"
       },
       {
         "pagePath": "pages/me/me",
         "text": "我的",
-        "iconPath": "image/icon_normal.png",
-        "selectedIconPath": "image/icon_pressed.png"
+        "iconPath": "image/icon_me_normal.png",
+        "selectedIconPath": "image/icon_me_press.png"
       }
     ]
   }

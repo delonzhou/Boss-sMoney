@@ -14,9 +14,9 @@
   </view>
 </picker>
 <view class="inputview padd">
-  <input class="input" bindconfirm="pwdconfirm" bindinput="pwdinput" placeholder="{{account}}" type="digit" />
-  <text>  元</text>
+  <input class="input" bindconfirm="cashconfirm" bindinput="cashinput" placeholder="{{account}}" type="digit" value="{{accounttxt}}"/>
+  <text>元</text>
 </view>
-  <button class="button"  hover-class="button-hover" size="80%" type="primary" bindtap="clicklogout" loading="{{loading}}">
+  <button class="button"  hover-class="button-hover" size="80%" type="primary" bindtap="clickCash" loading="{{loading}}">
 {{buttontext}}
 </button>
